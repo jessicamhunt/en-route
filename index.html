@@ -14,6 +14,12 @@
       crossorigin="anonymous"
     />
 
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css" type="text/css" />
 
@@ -32,14 +38,16 @@
       <div class="row">
         <div class="col-12">
           <div class="jumbotron text-center bg-dark text-white">
-            <h1 class="display-4">En Route</h1>
+            <h1 class="display-4">EN ROUTE</h1>
             <p class="lead">
               Find arrival and departure times for your public transit schedule!
             </p>
           </div>
 
           <div class="card bg-dark mb-4">
-            <div class="card-header text-white">Current Transit Schedule</div>
+            <div class="card-header bg-warning text-center text-dark">
+              CURRENT TRANSIT SCHEDULE
+            </div>
             <div class="card-body bg-dark">
               <table class="table table-dark" id="trainTable">
                 <thead class="text-white">
@@ -57,7 +65,9 @@
           </div>
 
           <div class="card bg-dark">
-            <div class="card-header text-white">Add A New Transit Line</div>
+            <div class="card-header text-dark text-center bg-warning">
+              ADD NEW TRANSIT LINE
+            </div>
             <div class="card-body bg-dark text-white">
               <form>
                 <div class="form-group">
@@ -98,7 +108,11 @@
                     placeholder="Enter transit frequency time"
                   />
                 </div>
-                <button type="submit" id="addTrain" class="btn btn-secondary">
+                <button
+                  type="submit"
+                  id="addTrain"
+                  class="btn btn-warning mt-3"
+                >
                   Find Next Arrival
                 </button>
               </form>
