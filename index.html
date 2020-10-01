@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Train Schedule</title>
+    <title>En Route</title>
 
     <!-- Bootstrap CSS CDN-->
     <link
@@ -13,6 +13,9 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" type="text/css" />
 
     <!-- jQuery hosted library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -28,20 +31,20 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <div class="jumbotron text-center bg-primary text-white">
-            <h1 class="display-4">Train Schedule</h1>
+          <div class="jumbotron text-center bg-dark text-white">
+            <h1 class="display-4">En Route</h1>
             <p class="lead">
-              Find arrival and departure times for any train schedule!
+              Find arrival and departure times for your public transit schedule!
             </p>
           </div>
 
-          <div class="card bg-primary mb-4">
-            <div class="card-header text-white">Current Train Schedule</div>
+          <div class="card bg-dark mb-4">
+            <div class="card-header text-white">Current Transit Schedule</div>
             <div class="card-body bg-white">
               <table class="table" id="trainTable">
                 <thead class="text-primary">
                   <tr>
-                    <th scope="col">Train Name</th>
+                    <th scope="col">Transit Name</th>
                     <th scope="col">Destination</th>
                     <th scope="col">Frequency (min)</th>
                     <th scope="col">Next Arrival</th>
@@ -53,17 +56,17 @@
             </div>
           </div>
 
-          <div class="card bg-primary">
-            <div class="card-header text-white">Add A New Train</div>
+          <div class="card bg-dark">
+            <div class="card-header text-white">Add A New Transit Line</div>
             <div class="card-body bg-white">
               <form>
                 <div class="form-group">
-                  <label for="trainNameInput">Train Name</label>
+                  <label for="trainNameInput">Transit Name</label>
                   <input
                     type="text"
                     class="form-control"
                     id="trainNameInput"
-                    placeholder="Enter train name"
+                    placeholder="Enter transit name"
                   />
                 </div>
                 <div class="form-group">
@@ -77,13 +80,13 @@
                 </div>
                 <div class="form-group">
                   <label for="trainTimeInput"
-                    >First Train Time (HH:mm - military time)</label
+                    >First Departure Time (HH:mm - military time)</label
                   >
                   <input
                     type="text"
                     class="form-control"
                     id="trainTimeInput"
-                    placeholder="Enter first train time"
+                    placeholder="Enter first departure time"
                   />
                 </div>
                 <div class="form-group">
@@ -92,11 +95,11 @@
                     type="text"
                     class="form-control"
                     id="trainFrequencyInput"
-                    placeholder="Enter train frequency time"
+                    placeholder="Enter transit frequency time"
                   />
                 </div>
                 <button type="submit" id="addTrain" class="btn btn-primary">
-                  Submit
+                  Find Next Arrival
                 </button>
               </form>
             </div>
